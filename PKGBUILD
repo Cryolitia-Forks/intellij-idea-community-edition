@@ -4,8 +4,8 @@
 # Maintainer: Orhun Parmaksız <orhun@archlinux.org>
 
 pkgname=intellij-idea-community-edition
-pkgver=2023.3
-_build=233.11799.241
+pkgver=2023.3.1
+_build=233.11799.300
 _jrever=17
 _jdkver=17
 pkgrel=1
@@ -63,7 +63,7 @@ build() {
   export MAVEN_REPOSITORY=${srcdir}/.m2/repository
   
   ./installers.cmd -Dintellij.build.use.compiled.classes=false -Dintellij.build.target.os=linux
-  tar -xf out/idea-ce/artifacts/ideaIC-${pkgver}-no-jbr.tar.gz -C "${srcdir}"
+  tar -xf out/idea-ce/artifacts/ideaIC-${_build}-no-jbr.tar.gz -C "${srcdir}"
 }
 
 package() {
