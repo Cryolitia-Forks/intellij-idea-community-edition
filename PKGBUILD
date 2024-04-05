@@ -4,11 +4,11 @@
 # Maintainer: Orhun Parmaksız <orhun@archlinux.org>
 
 pkgname=intellij-idea-community-edition
-pkgver=2023.3.6
-_build=233.15026.9
+pkgver=2024.1
+_build=241.14494.240
 _jrever=17
 _jdkver=17
-pkgrel=2
+pkgrel=1
 epoch=4
 pkgdesc='IDE for Java, Groovy and other programming languages with advanced refactoring features'
 url='https://www.jetbrains.com/idea/'
@@ -52,9 +52,8 @@ prepare() {
     -DgeneratePom=true
 
   patch -Np1 < "${srcdir}/enable-no-jdr.patch"
-  echo ${_build} > build.txt
-  # https://youtrack.jetbrains.com/issue/IDEA-343872/Community-build-performanceTesting-plugin-raises-exceptions
-  git cherry-pick -n -m1 "c2d297177eb31f7fbbc13fdbfb9c8fce48e51014"
+  sed -e "s/buildNumber = null/buildNumber = \"${_build}\"/" \
+      -i "build/src/OpenSourceCommunityInstallersBuildTarget.kt"
 }
 
 build() {
