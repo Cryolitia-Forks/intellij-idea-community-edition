@@ -8,15 +8,15 @@ pkgver=2024.1
 _build=241.14494.240
 _jrever=17
 _jdkver=17
-pkgrel=1
+pkgrel=2
 epoch=4
 pkgdesc='IDE for Java, Groovy and other programming languages with advanced refactoring features'
 url='https://www.jetbrains.com/idea/'
 arch=('x86_64')
 license=('Apache')
 backup=('usr/share/idea/bin/idea64.vmoptions')
-depends=('giflib' "java-runtime=${_jrever}" 'python' 'sh' 'ttf-font' 'libdbusmenu-glib' 'fontconfig' 'hicolor-icon-theme')
-makedepends=('ant' 'git' "java-environment-openjdk=${_jdkver}" maven)
+depends=('giflib' "java-environment-openjdk=${_jrever}" 'python' 'sh' 'ttf-font' 'libdbusmenu-glib' 'fontconfig' 'hicolor-icon-theme')
+makedepends=('ant' 'git' maven)
 optdepends=(
   'lldb: lldb frontend integration'
 )

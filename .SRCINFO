@@ -1,17 +1,16 @@
 pkgbase = intellij-idea-community-edition
 	pkgdesc = IDE for Java, Groovy and other programming languages with advanced refactoring features
 	pkgver = 2024.1
-	pkgrel = 1
+	pkgrel = 2
 	epoch = 4
 	url = https://www.jetbrains.com/idea/
 	arch = x86_64
 	license = Apache
 	makedepends = ant
 	makedepends = git
-	makedepends = java-environment-openjdk=17
 	makedepends = maven
 	depends = giflib
-	depends = java-runtime=17
+	depends = java-environment-openjdk=17
 	depends = python
 	depends = sh
 	depends = ttf-font
