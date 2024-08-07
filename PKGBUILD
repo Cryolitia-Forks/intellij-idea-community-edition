@@ -4,8 +4,8 @@
 # Maintainer: Orhun Parmaksız <orhun@archlinux.org>
 
 pkgname=intellij-idea-community-edition
-pkgver=2024.1.4
-_build=241.18034.62
+pkgver=2024.2
+_build=242.20224.300
 _jrever=17
 _jdkver=17
 pkgrel=1
@@ -52,8 +52,6 @@ prepare() {
     -DgeneratePom=true
 
   patch -Np1 < "${srcdir}/enable-no-jdr.patch"
-  sed -e "s/buildNumber = null/buildNumber = \"${_build}\"/" \
-      -i "build/src/OpenSourceCommunityInstallersBuildTarget.kt"
 }
 
 build() {
@@ -62,8 +60,8 @@ build() {
   export JAVA_HOME="/usr/lib/jvm/java-${_jdkver}-openjdk"
   export PATH="/usr/lib/jvm/java-${_jdkver}-openjdk/bin:$PATH"
   export MAVEN_REPOSITORY=${srcdir}/.m2/repository
-  
-  ./installers.cmd -Dintellij.build.use.compiled.classes=false -Dintellij.build.target.os=linux
+
+  ./installers.cmd -Dintellij.build.use.compiled.classes=false -Dintellij.build.target.os=linux -Dbuild.number="${_build}"
   tar -xf out/idea-ce/artifacts/ideaIC-${_build}-no-jbr.tar.gz -C "${srcdir}"
 }
 
