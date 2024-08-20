@@ -76,6 +76,7 @@ package() {
   install -Dm 644 ../idea.desktop -t "${pkgdir}"/usr/share/applications/
   install -Dm 755 ../idea.sh "${pkgdir}"/usr/bin/idea
   install -Dm 644 build.txt -t "${pkgdir}"/usr/share/idea
+  install -Dm 644 product-info.json -t "${pkgdir}"/usr/share/idea
 }
 
 # vim: ts=2 sw=2 et:
