@@ -4,11 +4,11 @@
 # Maintainer: Orhun Parmaksız <orhun@archlinux.org>
 
 pkgname=intellij-idea-community-edition
-pkgver=2024.2.0.1
-_build=242.20224.387
+pkgver=2024.2.0.2
+_build=242.20224.419
 _jrever=17
 _jdkver=17
-pkgrel=2
+pkgrel=1
 epoch=4
 pkgdesc='IDE for Java, Groovy and other programming languages with advanced refactoring features'
 url='https://www.jetbrains.com/idea/'
