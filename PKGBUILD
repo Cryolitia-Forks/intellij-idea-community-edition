@@ -6,8 +6,8 @@
 pkgname=intellij-idea-community-edition
 pkgver=2024.2.0.2
 _build=242.20224.419
-_jrever=17
-_jdkver=17
+_jrever=21
+_jdkver=21
 pkgrel=1
 epoch=4
 pkgdesc='IDE for Java, Groovy and other programming languages with advanced refactoring features'
@@ -32,7 +32,7 @@ noextract=('junit-3.8.1.jar')
 sha256sums=('SKIP'
             'SKIP'
             '049c4326b6b784da0c698cf62262b591b20abb52e0dcf869f869c0c655f3ce93'
-            'd7e4a325fccd48b8c8b0a6234df337b58364e648bb9b849e85ca38a059468e71'
+            '6f2b00d5bcf54639e6a1fa6387dffb9fb035f1dd58ffd31ea1689af74a30b784'
             'b7858737346fb08423ee7fd177f9e59180d2173d988dd8622b84d58426fcb3a7'
             'b58e459509e190bed737f3592bc1950485322846cf10e78ded1d065153012d70')
 
