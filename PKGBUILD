@@ -4,11 +4,11 @@
 # Maintainer: Orhun Parmaksız <orhun@archlinux.org>
 
 pkgname=intellij-idea-community-edition
-pkgver=2024.2.1
+pkgver=2024.2.2
 _build=242.21829.142
 _jrever=21
 _jdkver=21
-pkgrel=2
+pkgrel=1
 epoch=4
 pkgdesc='IDE for Java, Groovy and other programming languages with advanced refactoring features'
 url='https://www.jetbrains.com/idea/'
@@ -29,8 +29,8 @@ source=("git+https://github.com/JetBrains/intellij-community.git#tag=idea/${_bui
         # assumes the user's maven repo is at {$HOME}/.m2/repository and it contains junit-3.8.1.jar
         https://repo1.maven.org/maven2/junit/junit/3.8.1/junit-3.8.1.jar)
 noextract=('junit-3.8.1.jar')
-sha256sums=('SKIP'
-            'SKIP'
+sha256sums=('fbb7be2d8752e41c953c6f162c417b69c492c9b3a9f754d1a992ec3762daf468'
+            '2ed9213e6d107161ab201ad1ee0e57792294658c60b6558466c6b1ea48dba3e4'
             '049c4326b6b784da0c698cf62262b591b20abb52e0dcf869f869c0c655f3ce93'
             '6f2b00d5bcf54639e6a1fa6387dffb9fb035f1dd58ffd31ea1689af74a30b784'
             'b7858737346fb08423ee7fd177f9e59180d2173d988dd8622b84d58426fcb3a7'
